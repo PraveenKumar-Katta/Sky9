@@ -1,0 +1,158 @@
+/* ─── GOOGLE FONTS ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap');
+
+/* ─── CSS RESET ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  overflow-x: hidden;
+  font-family: 'Barlow', sans-serif;
+}
+
+/* ─── DESIGN TOKENS ─────────────────────────────────────────── */
+:root {
+  --gold:       #F5A623;
+  --gold-dark:  #D4891A;
+  --gold-alpha: rgba(245, 166, 35, 0.1);
+}
+
+/* ─── DARK THEME ────────────────────────────────────────────── */
+.theme-dark {
+  --bg:       #0C0C0C;
+  --bg2:      #131313;
+  --bg3:      #1A1A1A;
+  --card:     #181818;
+  --border:   #252525;
+  --text:     #F0EDE8;
+  --text2:    #9A9690;
+  --text3:    #4A4844;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ─── LIGHT THEME ───────────────────────────────────────────── */
+.theme-light {
+  --bg:       #F2EDE5;
+  --bg2:      #EAE4DB;
+  --bg3:      #E0D9CF;
+  --card:     #FFFFFF;
+  --border:   #D5CEC5;
+  --text:     #111010;
+  --text2:    #6B6560;
+  --text3:    #A09890;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ─── GLOBAL TRANSITIONS ────────────────────────────────────── */
+.sky9-app {
+  transition: background 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+}
+
+/* ─── TYPOGRAPHY UTILITIES ──────────────────────────────────── */
+.font-bebas     { font-family: 'Bebas Neue', cursive; letter-spacing: 0.04em; }
+.font-condensed { font-family: 'Barlow Condensed', sans-serif; }
+.font-barlow    { font-family: 'Barlow', sans-serif; }
+
+/* ─── SECTION BASE ──────────────────────────────────────────── */
+.section {
+  padding: 110px 60px;
+  background: var(--bg);
+}
+.section--alt {
+  background: var(--bg2);
+}
+
+/* ─── SECTION HEADER ────────────────────────────────────────── */
+.section-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(44px, 6vw, 78px);
+  line-height: 0.92;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+.section-title .accent { color: var(--gold); }
+
+/* ─── SHARED BUTTON STYLES ──────────────────────────────────── */
+.btn-primary {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  background: var(--gold);
+  color: #000;
+  padding: 13px 28px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover {
+  background: var(--gold-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  background: transparent;
+  color: var(--text);
+  padding: 13px 28px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ─── SCROLL-REVEAL ANIMATION ───────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── RESPONSIVE BREAKPOINTS ────────────────────────────────── */
+@media (max-width: 1024px) {
+  .section { padding: 80px 32px; }
+}
+@media (max-width: 640px) {
+  .section { padding: 70px 20px; }
+}
