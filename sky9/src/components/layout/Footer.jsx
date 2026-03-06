@@ -158,7 +158,7 @@ export default function Footer({ scrollTo }) {
 
       <div style={S.bottom}>
         <div style={S.copy}>
-          © 2025{" "}
+          © 2026{" "}
           <span style={{ color: "var(--gold)" }}>SKY9 Fitness Studio</span>. All
           rights reserved. Siddipet, Telangana.
         </div>

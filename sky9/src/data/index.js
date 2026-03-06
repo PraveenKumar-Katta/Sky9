@@ -142,7 +142,7 @@ export const LOCATION = {
     { day: "Saturday",  time: "6 AM – 9 PM"  },
     { day: "Sunday",    time: "6 AM – 1 PM"  },
   ],
-  mapsUrl: "https://maps.google.com/?q=Siddipet+Telangana",
+  mapsUrl: "https://maps.app.goo.gl/GxFuMYHtCqRJVJNc6",
 };
 
 // ─── FOOTER LINKS ─────────────────────────────────────────────
